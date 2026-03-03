@@ -30,7 +30,7 @@ from dotenv import load_dotenv
 #     probar_conexion()
 # 1. Cargar la API Key
 load_dotenv()
-api_key = os.getenv("AIzaSyDO5MJrOpeShYox5t58rxlq4wbhR9LZiCM")
+api_key = os.getenv("#####")
 
 # 2. Configurar el cliente oficial
 client = genai.Client(api_key=api_key)
