@@ -21,6 +21,33 @@ def obtener_modelos_activos():
         return []
 
 
+def es_modelo_embedding(modelo_id):
+    return "embedding" in modelo_id.lower()
+
+
+def seleccionar_modelo(modelos):
+    modelos_validos = [m for m in modelos if not es_modelo_embedding(m)]
+    if not modelos_validos:
+        print("No hay modelos generativos disponibles (solo embeddings).")
+        return None
+
+    print("\n--- Modelos Activos (generativos) ---")
+    for i, m in enumerate(modelos_validos):
+        print(f"[{i}] {m}")
+
+    seleccion = input("\nSelecciona el indice: ").strip()
+    if not seleccion.isdigit():
+        print("Indice invalido. Debe ser un numero.")
+        return None
+
+    indice = int(seleccion)
+    if indice < 0 or indice >= len(modelos_validos):
+        print("Indice fuera de rango.")
+        return None
+
+    return modelos_validos[indice]
+
+
 def extraer_texto_pdf(ruta_pdf):
     if not os.path.exists(ruta_pdf):
         return None
@@ -53,10 +80,9 @@ def main():
         print("No se detectaron modelos activos en LM Studio.")
         return
 
-    print("\n--- Modelos Activos ---")
-    for i, m in enumerate(modelos):
-        print(f"[{i}] {m}")
-    modelo_id = modelos[int(input("\nSelecciona el indice: "))]
+    modelo_id = seleccionar_modelo(modelos)
+    if not modelo_id:
+        return
 
     texto_pdf = extraer_texto_pdf("prueba_langExtract.pdf")
     if not texto_pdf:
@@ -73,11 +99,11 @@ def main():
 
     config = lx.factory.ModelConfig(
         model_id=modelo_id,
-        provider="openai",
+        provider="OpenAILanguageModel",
         provider_kwargs={
             "base_url": BASE_URL,
             "api_key": "lm-studio",
-            "response_format": {"type": "text"},
+            "response_format": {"type": "json_object"},
             "max_workers": 1,
             "max_output_tokens": MAX_OUTPUT_TOKENS,
             "temperature": 0,
@@ -88,12 +114,11 @@ def main():
 
     try:
         result = lx.extract(
-            texto_pdf,
+            text_or_documents=texto_pdf,
             prompt_description=prompt_instrucciones,
             examples=construir_ejemplos(),
             config=config,
             use_schema_constraints=False,
-            fence_output=True,
             max_char_buffer=MAX_CHAR_BUFFER,
             batch_length=1,
             max_workers=1,

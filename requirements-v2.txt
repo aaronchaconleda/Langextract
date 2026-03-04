@@ -1,0 +1,6 @@
+langextract==1.1.1
+langextract-openai==0.0.2
+openai==2.24.0
+requests==2.32.5
+PyMuPDF==1.27.1
+python-dotenv==1.2.2

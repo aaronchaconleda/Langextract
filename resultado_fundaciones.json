@@ -1,0 +1,158 @@
+{
+  "modelo": "google/gemma-3-4b",
+  "input_char_limit": 5000,
+  "max_output_tokens": 80,
+  "fundaciones": [
+    {
+      "empresa": "Apple",
+      "fundador": "Steve Jobs",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Microsoft",
+      "fundador": "Bill Gates",
+      "lugar": "Washington"
+    },
+    {
+      "empresa": "Amazon",
+      "fundador": "Jeff Bezos",
+      "lugar": "Washington"
+    },
+    {
+      "empresa": "Tesla",
+      "fundador": "Elon Musk",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Facebook",
+      "fundador": "Mark Zuckerberg",
+      "lugar": "Massachusetts"
+    },
+    {
+      "empresa": "Google",
+      "fundador": "Larry Page",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Oracle",
+      "fundador": "Larry Ellison",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Netflix",
+      "fundador": "Reed Hastings",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Disney",
+      "fundador": "Walt Disney",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Ford",
+      "fundador": "Henry Ford",
+      "lugar": "Michigan"
+    },
+    {
+      "empresa": "Nike",
+      "fundador": "Phil Knight",
+      "lugar": "Oregón"
+    },
+    {
+      "empresa": "Starbucks",
+      "fundador": "Howard Schultz",
+      "lugar": "Washington"
+    },
+    {
+      "empresa": "Walmart",
+      "fundador": "Sam Walton",
+      "lugar": "Arkansas"
+    },
+    {
+      "empresa": "Dell",
+      "fundador": "Michael Dell",
+      "lugar": "Texas"
+    },
+    {
+      "empresa": "Bloomberg",
+      "fundador": "Michael Bloomberg",
+      "lugar": "Nueva York"
+    },
+    {
+      "empresa": "Virgin",
+      "fundador": "Richard Branson",
+      "lugar": "Londres"
+    },
+    {
+      "empresa": "Alibaba",
+      "fundador": "Jack Ma",
+      "lugar": "Hangzhou"
+    },
+    {
+      "empresa": "Toyota",
+      "fundador": "Kiichiro Toyoda",
+      "lugar": "Japón"
+    },
+    {
+      "empresa": "Honda",
+      "fundador": "Soichiro Honda",
+      "lugar": "Japón"
+    },
+    {
+      "empresa": "Ferrari",
+      "fundador": "Enzo Ferrari",
+      "lugar": "Italia"
+    },
+    {
+      "empresa": "Patagonia",
+      "fundador": "Yvon Chouinard",
+      "lugar": "Maine"
+    },
+    {
+      "empresa": "Zara",
+      "fundador": "Amancio Ortega",
+      "lugar": "España"
+    },
+    {
+      "empresa": "Spotify",
+      "fundador": "Daniel Ek",
+      "lugar": "Suecia"
+    },
+    {
+      "empresa": "Twitter",
+      "fundador": "Jack Dorsey",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Adobe",
+      "fundador": "John Warnock",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Intel",
+      "fundador": "Gordon Moore",
+      "lugar": "California"
+    },
+    {
+      "empresa": "SpaceX",
+      "fundador": "Elon Musk",
+      "lugar": "California"
+    },
+    {
+      "empresa": "Nintendo",
+      "fundador": "Fusajiro Yamauchi",
+      "lugar": "Japón"
+    },
+    {
+      "empresa": "Hyatt",
+      "fundador": "Jay Pritzker",
+      "lugar": "Illinois"
+    },
+    {
+      "empresa": "Hilton",
+      "fundador": "Conrad Hilton",
+      "lugar": "Nuevo México"
+    }
+  ],
+  "total_fundaciones": 30
+}
